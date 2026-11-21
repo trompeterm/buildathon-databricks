@@ -1,0 +1,7 @@
+target/
+*.zip
+dev/
+out/
+data/
+.git
+scripts/

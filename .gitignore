@@ -1,0 +1,5 @@
+target/
+*.zip
+dev/
+out/
+data/

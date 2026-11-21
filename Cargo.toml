@@ -1,0 +1,23 @@
+[package]
+name = "shopping-sessions"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[[bin]]
+name = "pipeline"
+path = "src/main.rs"
+
+[dependencies]
+memmap2 = "0.9"
+memchr = "2"
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+rustc-hash = "2"
+parquet = { version = "55", default-features = false }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+debug = false
